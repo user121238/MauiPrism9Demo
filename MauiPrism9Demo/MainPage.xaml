@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="MauiPrism9Demo.MainPage"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:core="clr-namespace:Core;assembly=Core"
+             xmlns:prism="http://prismlibrary.com">
+
+    <ContentView prism:RegionManager.RegionName="{x:Static core:RegionNames.MainRegion}" />
+
+
+</ContentPage>
