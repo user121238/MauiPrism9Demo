@@ -2,7 +2,7 @@
 
 namespace Core
 {
-    public class CoreModule : IModuleBase
+    public class CoreModule : IModule
     {
         #region Implementation of IModule
 

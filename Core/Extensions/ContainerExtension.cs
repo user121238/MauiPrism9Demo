@@ -1,6 +1,5 @@
-﻿using System.Reflection;
-using Core.Attributes;
-using Prism.Ioc;
+﻿using Core.Attributes;
+using System.Reflection;
 
 namespace Core.Extensions
 {
@@ -16,12 +15,13 @@ namespace Core.Extensions
 
             foreach (var type in types)
             {
-                IocForRegionNavigationAttribute? ioc = type.GetCustomAttribute<IocForRegionNavigationAttribute>();
+                var attribute = type.GetCustomAttribute<IocForRegionNavigationAttribute>();
 
-                if (ioc != null)
+                if (attribute != null)
                 {
-                    var viewModelType = ioc.ViewModelType;
-                    var registerName = ioc.RegisterName ?? type.Name;
+                    var viewModelType = attribute.ViewModelType;
+                    //如果注册名称为空则使用View的名称
+                    var registerName = attribute.RegisterName ?? type.Name;
 
                     container.RegisterForRegionNavigation(type, viewModelType, registerName);
                 }

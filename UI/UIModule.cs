@@ -1,8 +1,6 @@
-﻿using System.Reflection;
-using Core;
+﻿using Core;
 using Core.Extensions;
-using Prism.Ioc;
-using UI.ViewModels;
+using System.Reflection;
 using UI.Views;
 
 namespace UI
