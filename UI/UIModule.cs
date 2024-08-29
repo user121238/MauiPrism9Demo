@@ -1,4 +1,7 @@
-﻿using Core;
+﻿using System.Reflection;
+using Core;
+using Core.Extensions;
+using Prism.Ioc;
 using UI.ViewModels;
 using UI.Views;
 
@@ -13,8 +16,10 @@ namespace UI
         /// </summary>
         public void RegisterTypes(IContainerRegistry container)
         {
-            container.RegisterForRegionNavigation<ViewA, ViewAViewModel>();
-            container.RegisterForRegionNavigation<ViewB, ViewBViewModel>();
+            //container.RegisterForRegionNavigation<ViewA, ViewAViewModel>();
+            //container.RegisterForRegionNavigation<ViewB, ViewBViewModel>();
+
+            container.RegisterAllViewModel(Assembly.GetAssembly(typeof(UiModule))!);
         }
 
         /// <summary>Notifies the module that it has been initialized.</summary>
