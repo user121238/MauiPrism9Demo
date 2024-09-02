@@ -12,6 +12,16 @@
                     HorizontalOptions="Center"
                     Text="GoBack"
                     VerticalOptions="Center" />
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Title:" />
+                <Label Text="{Binding TestDto.Title}" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Content:" />
+                <Label Text="{Binding TestDto.Content}" />
+            </StackLayout>
+
         </VerticalStackLayout>
     </Grid>
 </ContentView>

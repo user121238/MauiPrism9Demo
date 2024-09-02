@@ -1,6 +1,8 @@
 ﻿using System.Diagnostics;
 using Core;
 using Microsoft.Extensions.Logging;
+using Microsoft.Maui.LifecycleEvents;
+using Microsoft.UI;
 using UI;
 
 namespace MauiPrism9Demo

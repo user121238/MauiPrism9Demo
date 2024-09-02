@@ -10,5 +10,10 @@
                 HorizontalOptions="Center"
                 Text="ToViewBCommand"
                 VerticalOptions="Center" />
+
+        <Button Command="{Binding PublishEventCommand}"
+                HorizontalOptions="Center"
+                Text="PublishEvent"
+                VerticalOptions="Center" />
     </VerticalStackLayout>
 </ContentView>

@@ -24,6 +24,7 @@ namespace UI
         public void OnInitialized(IContainerProvider containerProvider)
         {
             regionManager.RegisterViewWithRegion(RegionNames.MainRegion, nameof(ViewA));
+            regionManager.RegisterViewWithRegion(RegionNames.ContentRegion, nameof(ViewB));
         }
 
         #endregion
