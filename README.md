@@ -3,3 +3,4 @@
 教程
 1. [从零开始搭建Maui框架01-搭建基础框架](https://zhuanlan.zhihu.com/p/717003225)
 2. [从零开始搭建Maui框架02-自动注册视图和视图模型](https://zhuanlan.zhihu.com/p/717183206)
+3. [从零开始搭建Maui框架03-添加事件聚合器](https://zhuanlan.zhihu.com/p/717782227)
