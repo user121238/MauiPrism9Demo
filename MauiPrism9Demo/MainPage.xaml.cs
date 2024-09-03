@@ -1,4 +1,6 @@
-﻿namespace MauiPrism9Demo
+﻿using Serilog;
+
+namespace MauiPrism9Demo
 {
     public partial class MainPage : ContentPage
     {

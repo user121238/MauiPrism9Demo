@@ -14,6 +14,7 @@ namespace UI.ViewModels
         public ViewBViewModel(IRegionManager regionManager, IEventAggregator eventAggregator)
         {
             _regionManager = regionManager;
+            _aggregator = eventAggregator;
 
             eventAggregator.GetEvent<EventTest>().Subscribe(EventTestHandle);
         }
