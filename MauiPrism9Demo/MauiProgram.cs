@@ -3,6 +3,9 @@ using Microsoft.Extensions.Logging;
 using Serilog;
 using Serilog.Events;
 using System.Diagnostics;
+using CommunityToolkit.Maui;
+using Controls;
+using MauiPrism9Demo.ViewModels;
 using UI;
 
 
@@ -13,7 +16,7 @@ namespace MauiPrism9Demo
         public static MauiApp CreateMauiApp()
         {
             var builder = MauiApp.CreateBuilder();
-            builder.UseMauiApp<App>();
+            builder.UseMauiApp<App>().UseMauiCommunityToolkit();
 
 
             builder.ConfigureFonts(fonts =>
@@ -31,7 +34,7 @@ namespace MauiPrism9Demo
 
             builder.UsePrism(prism =>
             {
-                prism.RegisterTypes(container => { container.RegisterForNavigation<MainPage>(); });
+                prism.RegisterTypes(container => { container.RegisterForNavigation<MainPage, MainPageViewModel>(); });
 
 
                 prism.ConfigureLogging(configureLogging =>
@@ -63,6 +66,7 @@ namespace MauiPrism9Demo
                 prism.ConfigureModuleCatalog(configureCatalog =>
                 {
                     configureCatalog.AddModule<CoreModule>(InitializationMode.OnDemand);
+                    configureCatalog.AddModule<ControlModule>();
                     configureCatalog.AddModule<UiModule>();
                 });
 

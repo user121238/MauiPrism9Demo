@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiPrism9Demo", "MauiPrism
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MauiLib", "MauiLib\MauiLib.csproj", "{9C632D8F-7008-4207-9833-60563C688F8A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "UI\UI.csproj", "{021088BC-79BC-4E1A-9294-4E36D61EEA34}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UI", "UI\UI.csproj", "{021088BC-79BC-4E1A-9294-4E36D61EEA34}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{C7149AB5-457F-4E3E-B1B8-C3BE2C2987F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core", "Core\Core.csproj", "{C7149AB5-457F-4E3E-B1B8-C3BE2C2987F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controls", "Controls\Controls.csproj", "{FA93E03C-AB33-47F2-9C22-9AFBFC17BEC9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{C7149AB5-457F-4E3E-B1B8-C3BE2C2987F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7149AB5-457F-4E3E-B1B8-C3BE2C2987F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7149AB5-457F-4E3E-B1B8-C3BE2C2987F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA93E03C-AB33-47F2-9C22-9AFBFC17BEC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA93E03C-AB33-47F2-9C22-9AFBFC17BEC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA93E03C-AB33-47F2-9C22-9AFBFC17BEC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA93E03C-AB33-47F2-9C22-9AFBFC17BEC9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

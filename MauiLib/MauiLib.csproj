@@ -20,8 +20,10 @@
 
 	<ItemGroup>
 		<PackageReference Include="Castle.Core" Version="5.1.1" />
+		<PackageReference Include="CommunityToolkit.Maui" Version="9.0.3" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
+		<PackageReference Include="Microsoft.Maui.Essentials" Version="8.0.82" />
         <PackageReference Include="Prism.DryIoc.Maui" Version="9.0.537" />
         <PackageReference Include="Prism.Maui" Version="9.0.537" />
         <PackageReference Include="Serilog" Version="4.0.1" />

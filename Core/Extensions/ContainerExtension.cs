@@ -27,5 +27,25 @@ namespace Core.Extensions
                 }
             }
         }
+
+
+        public static void RegisterAllDialogViewModel(this IContainerRegistry container, Assembly assembly)
+        {
+            var types = assembly.GetTypes().Where(c => c.BaseType == typeof(ContentView));
+
+            foreach (var type in types)
+            {
+                var attribute = type.GetCustomAttribute<IocForDialogAttribute>();
+
+                if (attribute != null)
+                {
+                    var viewModelType = attribute.ViewModelType;
+                    //如果注册名称为空则使用View的名称
+                    var registerName = attribute.RegisterName ?? type.Name;
+
+                    container.RegisterDialog(type, viewModelType, registerName);
+                }
+            }
+        }
     }
 }

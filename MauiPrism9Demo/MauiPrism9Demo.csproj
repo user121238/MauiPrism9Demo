@@ -71,6 +71,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <ProjectReference Include="..\Controls\Controls.csproj" />
 	  <ProjectReference Include="..\UI\UI.csproj" />
 	</ItemGroup>
 

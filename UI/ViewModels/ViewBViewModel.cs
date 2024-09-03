@@ -22,7 +22,6 @@ namespace UI.ViewModels
         private void EventTestHandle(EventTestDto dto)
         {
             TestDto = dto;
-            _aggregator.GetEvent<EventTest>().Unsubscribe(EventTestHandle);
         }
 
         private EventTestDto _testDto;
