@@ -1,8 +1,10 @@
-﻿using Android.Content;
+﻿#if ANDROID
+using Android.Content;
 using Android.Provider;
+#endif
+
 using CommunityToolkit.Maui.Alerts;
 using CommunityToolkit.Maui.Core;
-using Prism.Services;
 
 namespace MauiPrism9Demo.ViewModels
 {

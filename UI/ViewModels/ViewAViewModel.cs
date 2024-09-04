@@ -1,4 +1,5 @@
-﻿using System.Windows.Input;
+﻿using System.Diagnostics;
+using System.Windows.Input;
 using Controls.DialogViews;
 using Core;
 using Core.Dtos;
@@ -27,8 +28,12 @@ namespace UI.ViewModels
 
             logger.Information("发布消息");
 
-
-            dialogService.ShowDialog(nameof(TestDialog), new DialogCallback().OnError(ex => throw ex));
+            dialogService.ShowDialog(
+                name: nameof(TestDialog),
+                parameters: new DialogParameters
+                {
+                    { "key", "value" }
+                }, callback: result => { Debug.WriteLine(result); });
         });
     }
 }
