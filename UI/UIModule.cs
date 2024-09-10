@@ -1,6 +1,7 @@
 ﻿using Core;
 using Core.Extensions;
 using System.Reflection;
+using Core.Abstracts;
 using UI.Views;
 
 namespace UI
@@ -14,17 +15,16 @@ namespace UI
         /// </summary>
         public void RegisterTypes(IContainerRegistry container)
         {
-            //container.RegisterForRegionNavigation<ViewA, ViewAViewModel>();
-            //container.RegisterForRegionNavigation<ViewB, ViewBViewModel>();
-
             container.RegisterAllViewModel(Assembly.GetAssembly(typeof(UiModule))!);
+            container.RegisterScoped<IAppContext, UiAppContext>();
         }
 
         /// <summary>Notifies the module that it has been initialized.</summary>
         public void OnInitialized(IContainerProvider containerProvider)
         {
-            regionManager.RegisterViewWithRegion(RegionNames.MainRegion, nameof(ViewA));
-            regionManager.RegisterViewWithRegion(RegionNames.ContentRegion, nameof(ViewB));
+            //regionManager.RegisterViewWithRegion(RegionNames.MainRegion, nameof(ViewA));
+            //regionManager.RegisterViewWithRegion(RegionNames.ContentRegion, nameof(ViewB));
+            regionManager.RegisterViewWithRegion(RegionNames.MainRegion, nameof(LoginPage));
         }
 
         #endregion

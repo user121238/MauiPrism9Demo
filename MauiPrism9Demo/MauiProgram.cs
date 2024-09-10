@@ -7,6 +7,7 @@ using CommunityToolkit.Maui;
 using Controls;
 using MauiPrism9Demo.ViewModels;
 using UI;
+using UraniumUI;
 
 
 namespace MauiPrism9Demo
@@ -23,7 +24,10 @@ namespace MauiPrism9Demo
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                fonts.AddMaterialIconFonts();
             });
+
+            builder.UseUraniumUI().UseUraniumUIMaterial();
 
 
 #if DEBUG

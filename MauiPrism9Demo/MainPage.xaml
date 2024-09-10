@@ -5,10 +5,13 @@
              xmlns:core="clr-namespace:Core;assembly=Core"
              xmlns:prism="http://prismlibrary.com">
 
-    <Grid RowDefinitions="*,*">
+    <!--<Grid RowDefinitions="*,*">
         <ContentView Grid.Row="0" prism:RegionManager.RegionName="{x:Static core:RegionNames.MainRegion}" />
         <ContentView Grid.Row="1" prism:RegionManager.RegionName="{x:Static core:RegionNames.ContentRegion}" />
-    </Grid>
+    </Grid>-->
+
+
+    <ContentView prism:RegionManager.RegionName="{x:Static core:RegionNames.MainRegion}" />
 
 
 
