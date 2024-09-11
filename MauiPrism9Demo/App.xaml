@@ -2,16 +2,27 @@
 <Application x:Class="MauiPrism9Demo.App"
              xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:MauiPrism9Demo"
+             xmlns:light="clr-namespace:UI.Styles.Themes.Dark;assembly=UI"
              xmlns:material="http://schemas.enisn-projects.io/dotnet/maui/uraniumui/material">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary x:Name="AppColors" Source="Resources/Styles/Colors.xaml" />
+
                 <ResourceDictionary x:Name="AppStyles" Source="Resources/Styles/Styles.xaml" />
 
+
+                <ResourceDictionary Source="Resources/Styles/LightTheme.xaml" />
+
+
+
                 <material:StyleResource BasedOn="{x:Reference AppStyles}" ColorsOverride="{x:Reference AppColors}" />
+
+                <!--<ResourceDictionary Source="Resources/Styles/DarkTheme.xaml" />-->
+
             </ResourceDictionary.MergedDictionaries>
+
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>

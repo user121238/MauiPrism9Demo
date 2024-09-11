@@ -5,12 +5,40 @@ using Android.Provider;
 
 using CommunityToolkit.Maui.Alerts;
 using CommunityToolkit.Maui.Core;
+using Core.Abstracts;
+using Core.Enums;
+using Core.Events;
+using MauiPrism9Demo.Resources.Styles;
 
 namespace MauiPrism9Demo.ViewModels
 {
-    public class MainPageViewModel(IPageDialogService pageDialogService)
+    public class MainPageViewModel
         : IRegionMemberLifetime, IPageLifecycleAware, INavigatedAware
     {
+        private readonly IPageDialogService _pageDialogService;
+
+        public MainPageViewModel(IPageDialogService pageDialogService, IEventAggregator eventAggregator)
+        {
+            _pageDialogService = pageDialogService;
+            eventAggregator.GetEvent<ChangeThemeEvent>().Subscribe(theme =>
+            {
+                var m = Application.Current?.Resources.MergedDictionaries;
+                if (m == null)
+                {
+                    return;
+                }
+
+                var current = m.OfType<ITheme>().FirstOrDefault();
+
+                if (current is ResourceDictionary rd)
+                {
+                    m.Remove(rd);
+                }
+
+                m.Add(theme == ThemeKey.Light ? new LightTheme() : new DarkTheme());
+            });
+        }
+
         #region Implementation of IRegionMemberLifetime
 
         /// <summary>
@@ -35,7 +63,7 @@ namespace MauiPrism9Demo.ViewModels
                 {
                     await Toast.Make("此应用程序需要文件读写权限才能使用", ToastDuration.Short).Show();
                     var alertResult =
-                        await pageDialogService.DisplayAlertAsync("提示", "此应用程序需要文件读写权限才能使用", "前往设置", "退出程序");
+                        await _pageDialogService.DisplayAlertAsync("提示", "此应用程序需要文件读写权限才能使用", "前往设置", "退出程序");
                     //  var alertResult = await DisplayAlert("提示", "此应用程序需要文件读写权限才能使用", "前往设置", "暂不设置");
                     if (alertResult)
                     {

@@ -1,4 +1,6 @@
-﻿namespace MauiPrism9Demo
+﻿using MauiPrism9Demo.Resources.Styles;
+
+namespace MauiPrism9Demo
 {
     public partial class App : Application
     {

@@ -1,8 +1,7 @@
 ﻿namespace Core.Enums
 {
-    public enum Themes
+    public enum ThemeKey
     {
-        Default,
         Dark,
         Light
     }

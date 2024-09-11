@@ -37,14 +37,15 @@
                                 IsPassword="True" />
 
 
-            <material:ButtonView HeightRequest="52">
+            <Button BackgroundColor="{DynamicResource ThemeColor}" Text="登录" />
+            <material:ButtonView HeightRequest="52" TappedCommand="{Binding ModifyThemeCommand}">
                 <Label HorizontalOptions="Center"
                        Text="登录"
                        TextColor="White"
                        VerticalOptions="Center" />
             </material:ButtonView>
 
-            <material:CheckBox HorizontalOptions="Center" Text="我已阅读并同意服务协议和QQ隐私保护指引" />
+            <material:CheckBox HorizontalOptions="Center" Text="{Binding CurrentThemeStr}" />
 
         </VerticalStackLayout>
 
