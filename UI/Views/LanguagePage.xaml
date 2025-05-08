@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView x:Class="UI.Views.LanguagePage"
+             xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behaviors="clr-namespace:UI.Behaviors">
+    <ContentView.Resources>
+        <!--<Style TargetType="Label">
+            <Setter Property="Behaviors">
+
+            </Setter>
+        </Style>-->
+    </ContentView.Resources>
+    <Grid>
+        <Label HorizontalOptions="Center"
+               Text="{DynamicResource AppName}"
+               VerticalOptions="Center">
+            <Label.Behaviors>
+                <behaviors:LabelTextAnimationBehavior />
+            </Label.Behaviors>
+        </Label>
+
+        <Button Margin="0,0,0,20"
+                Command="{Binding SwitchLanguageCommand}"
+                HorizontalOptions="Center"
+                Text="切换语言"
+                VerticalOptions="End" />
+    </Grid>
+</ContentView>

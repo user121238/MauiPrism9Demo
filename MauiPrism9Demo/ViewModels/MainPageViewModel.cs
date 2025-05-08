@@ -37,6 +37,15 @@ namespace MauiPrism9Demo.ViewModels
 
                 m.Add(theme == ThemeKey.Light ? new LightTheme() : new DarkTheme());
             });
+
+            eventAggregator.GetEvent<ChangeLanguageEvent>().Subscribe(language =>
+            {
+                var m = Application.Current?.Resources.MergedDictionaries;
+                if (m == null)
+                {
+                    return;
+                }
+            });
         }
 
         #region Implementation of IRegionMemberLifetime

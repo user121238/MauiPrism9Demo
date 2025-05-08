@@ -22,7 +22,7 @@ namespace UI.ViewModels
 
         public ICommand ToViewBCommand => new DelegateCommand(() =>
         {
-            _regionManager.RequestNavigate(RegionNames.MainRegion, nameof(ViewB));
+            _regionManager.RequestNavigate(RegionNames.MainRegion, nameof(LanguagePage));
         });
 
         public ICommand PublishEventCommand => new DelegateCommand(() =>

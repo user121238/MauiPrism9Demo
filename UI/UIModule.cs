@@ -22,9 +22,10 @@ namespace UI
         /// <summary>Notifies the module that it has been initialized.</summary>
         public void OnInitialized(IContainerProvider containerProvider)
         {
-            //regionManager.RegisterViewWithRegion(RegionNames.MainRegion, nameof(ViewA));
+            //  regionManager.RegisterViewWithRegion(RegionNames.MainRegion, nameof(ViewA));
             //regionManager.RegisterViewWithRegion(RegionNames.ContentRegion, nameof(ViewB));
-            regionManager.RegisterViewWithRegion(RegionNames.MainRegion, nameof(LoginPage));
+            //regionManager.RegisterViewWithRegion(RegionNames.MainRegion, nameof(LoginPage));
+            regionManager.RegisterViewWithRegion(RegionNames.MainRegion, nameof(LanguagePage));
         }
 
         #endregion
